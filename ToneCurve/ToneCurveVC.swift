@@ -20,8 +20,8 @@ class ToneCurveLeftView: UIView
         var colorSpaceRef = CGColorSpaceCreateDeviceRGB();
         var components: [CGFloat] = [
             // R, G, B, Alpha
-            0.0, 0.0, 0.0, 1.0,
-            1.0, 1.0, 1.0, 1.0
+            1.0, 1.0, 1.0, 1.0,
+            0.0, 0.0, 0.0, 1.0
         ];
         var locations: [CGFloat] = [0.0, 1.0];
         
@@ -54,8 +54,8 @@ class ToneCurveRightView: UIView
         var colorSpaceRef = CGColorSpaceCreateDeviceRGB();
         var components: [CGFloat] = [
             // R, G, B, Alpha
-            1.0, 1.0, 1.0, 1.0,
-            0.0, 0.0, 0.0, 1.0
+            0.0, 0.0, 0.0, 1.0,
+            1.0, 1.0, 1.0, 1.0
         ];
         var locations: [CGFloat] = [0.0, 1.0];
         

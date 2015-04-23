@@ -130,13 +130,13 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdT-6F-a0I" customClass="ToneCurveRightView" customModule="ToneCurve" customModuleProvider="target">
-                                <rect key="frame" x="20" y="536" width="300" height="20"/>
+                                <rect key="frame" x="15" y="541" width="300" height="10"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="XQ6-Wo-YLR"/>
                                     <constraint firstAttribute="height" constant="20" id="ZEH-H8-fPB"/>
                                     <constraint firstAttribute="width" constant="450" id="ngf-dZ-jKb"/>
-                                    <constraint firstAttribute="height" constant="20" id="qgx-Q9-5c1"/>
+                                    <constraint firstAttribute="height" constant="10" id="qgx-Q9-5c1"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -146,12 +146,12 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-Eb-uCz" customClass="ToneCurveLeftView" customModule="ToneCurve" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="236" width="20" height="300"/>
+                                <rect key="frame" x="5" y="241" width="10" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="2oe-gc-P2S"/>
                                     <constraint firstAttribute="height" constant="300" id="9rB-go-AzW"/>
-                                    <constraint firstAttribute="width" constant="20" id="fq7-oJ-Ugm"/>
+                                    <constraint firstAttribute="width" constant="10" id="fq7-oJ-Ugm"/>
                                     <constraint firstAttribute="height" constant="450" id="jOG-DB-mXi"/>
                                 </constraints>
                                 <variation key="default">
@@ -162,7 +162,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iez-aQ-XYX" customClass="ToneCurveView" customModule="ToneCurve" customModuleProvider="target">
-                                <rect key="frame" x="20" y="236" width="300" height="300"/>
+                                <rect key="frame" x="15" y="241" width="300" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="162-ad-gEy"/>
@@ -185,15 +185,16 @@
                             <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="KkX-Eb-uCz" secondAttribute="bottom" constant="20" id="7GI-TW-qbL"/>
                             <constraint firstItem="cav-mb-XF5" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="ABd-Qd-Xjb"/>
                             <constraint firstAttribute="trailing" secondItem="2CW-nw-kki" secondAttribute="trailing" id="CQ6-xB-0st"/>
-                            <constraint firstItem="KkX-Eb-uCz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="F4M-Zw-FXY"/>
+                            <constraint firstItem="KkX-Eb-uCz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" constant="5" id="F4M-Zw-FXY"/>
                             <constraint firstItem="qdT-6F-a0I" firstAttribute="top" secondItem="iez-aQ-XYX" secondAttribute="bottom" id="F59-Ko-Sm3"/>
-                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="KkX-Eb-uCz" secondAttribute="bottom" constant="20" id="JUx-RV-w9x"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="KkX-Eb-uCz" secondAttribute="bottom" constant="15" id="JUx-RV-w9x"/>
                             <constraint firstItem="vvK-Qh-gwW" firstAttribute="top" secondItem="2CW-nw-kki" secondAttribute="bottom" id="PHI-dS-rcy"/>
                             <constraint firstAttribute="trailing" secondItem="cav-mb-XF5" secondAttribute="trailing" id="QPb-8f-pNv"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="qdT-6F-a0I" secondAttribute="bottom" constant="5" id="RQC-7N-kG7"/>
                             <constraint firstItem="nEH-n6-Ppz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="WQt-sV-AC4"/>
                             <constraint firstItem="nEH-n6-Ppz" firstAttribute="top" secondItem="cav-mb-XF5" secondAttribute="bottom" id="WWp-ki-exd"/>
                             <constraint firstItem="KkX-Eb-uCz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="bDl-3H-XqB"/>
-                            <constraint firstItem="qdT-6F-a0I" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" constant="20" id="dOE-ie-SLD"/>
+                            <constraint firstItem="qdT-6F-a0I" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" constant="15" id="dOE-ie-SLD"/>
                             <constraint firstItem="qdT-6F-a0I" firstAttribute="top" secondItem="iez-aQ-XYX" secondAttribute="bottom" id="g0b-bo-b0L"/>
                             <constraint firstItem="iez-aQ-XYX" firstAttribute="leading" secondItem="KkX-Eb-uCz" secondAttribute="trailing" id="ifd-wb-HXH"/>
                             <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="qdT-6F-a0I" secondAttribute="bottom" id="kKc-3N-J1e"/>
@@ -210,6 +211,7 @@
                                 <exclude reference="6Vp-Qn-vEn"/>
                                 <exclude reference="F59-Ko-Sm3"/>
                                 <exclude reference="7GI-TW-qbL"/>
+                                <exclude reference="kKc-3N-J1e"/>
                                 <exclude reference="qJ3-IE-lej"/>
                             </mask>
                         </variation>
