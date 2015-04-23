@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5012A9B11AE86FF600DFEE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012A9B01AE86FF600DFEE89 /* AppDelegate.swift */; };
+		5012A9B31AE86FF600DFEE89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012A9B21AE86FF600DFEE89 /* ViewController.swift */; };
+		5012A9B61AE86FF600DFEE89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5012A9B41AE86FF600DFEE89 /* Main.storyboard */; };
+		5012A9B81AE86FF600DFEE89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5012A9B71AE86FF600DFEE89 /* Images.xcassets */; };
+		5012A9BB1AE86FF600DFEE89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5012A9B91AE86FF600DFEE89 /* LaunchScreen.xib */; };
+		5012A9C71AE86FF600DFEE89 /* ToneCurveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012A9C61AE86FF600DFEE89 /* ToneCurveTests.swift */; };
+		5012A9D21AE8710300DFEE89 /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012A9D01AE8710300DFEE89 /* ImageProcessing.swift */; };
+		5012A9D31AE8710300DFEE89 /* ToneCurveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5012A9D11AE8710300DFEE89 /* ToneCurveVC.swift */; };
+		5012A9D51AE8720500DFEE89 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9D41AE8720500DFEE89 /* GPUImage.framework */; };
+		5012A9DC1AE8791C00DFEE89 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9D71AE8791C00DFEE89 /* AVFoundation.framework */; };
+		5012A9DD1AE8791C00DFEE89 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9D81AE8791C00DFEE89 /* CoreMedia.framework */; };
+		5012A9DE1AE8791C00DFEE89 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */; };
+		5012A9DF1AE8791C00DFEE89 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9DA1AE8791C00DFEE89 /* OpenGLES.framework */; };
+		5012A9E01AE8791C00DFEE89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9DB1AE8791C00DFEE89 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5012A9C11AE86FF600DFEE89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5012A9A31AE86FF600DFEE89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5012A9AA1AE86FF600DFEE89;
+			remoteInfo = ToneCurve;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5012A9AB1AE86FF600DFEE89 /* ToneCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToneCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5012A9AF1AE86FF600DFEE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5012A9B01AE86FF600DFEE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5012A9B21AE86FF600DFEE89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5012A9B51AE86FF600DFEE89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5012A9B71AE86FF600DFEE89 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5012A9BA1AE86FF600DFEE89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5012A9C01AE86FF600DFEE89 /* ToneCurveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToneCurveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5012A9C51AE86FF600DFEE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5012A9C61AE86FF600DFEE89 /* ToneCurveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneCurveTests.swift; sourceTree = "<group>"; };
+		5012A9D01AE8710300DFEE89 /* ImageProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
+		5012A9D11AE8710300DFEE89 /* ToneCurveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneCurveVC.swift; sourceTree = "<group>"; };
+		5012A9D41AE8720500DFEE89 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
+		5012A9D71AE8791C00DFEE89 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5012A9D81AE8791C00DFEE89 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		5012A9DA1AE8791C00DFEE89 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		5012A9DB1AE8791C00DFEE89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5012A9A81AE86FF600DFEE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012A9DC1AE8791C00DFEE89 /* AVFoundation.framework in Frameworks */,
+				5012A9DD1AE8791C00DFEE89 /* CoreMedia.framework in Frameworks */,
+				5012A9DE1AE8791C00DFEE89 /* CoreVideo.framework in Frameworks */,
+				5012A9DF1AE8791C00DFEE89 /* OpenGLES.framework in Frameworks */,
+				5012A9E01AE8791C00DFEE89 /* QuartzCore.framework in Frameworks */,
+				5012A9D51AE8720500DFEE89 /* GPUImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012A9BD1AE86FF600DFEE89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5012A9A21AE86FF600DFEE89 = {
+			isa = PBXGroup;
+			children = (
+				5012A9AD1AE86FF600DFEE89 /* ToneCurve */,
+				5012A9C31AE86FF600DFEE89 /* ToneCurveTests */,
+				5012A9D61AE8721800DFEE89 /* Frameworks */,
+				5012A9AC1AE86FF600DFEE89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5012A9AC1AE86FF600DFEE89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9AB1AE86FF600DFEE89 /* ToneCurve.app */,
+				5012A9C01AE86FF600DFEE89 /* ToneCurveTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5012A9AD1AE86FF600DFEE89 /* ToneCurve */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9B01AE86FF600DFEE89 /* AppDelegate.swift */,
+				5012A9B21AE86FF600DFEE89 /* ViewController.swift */,
+				5012A9D11AE8710300DFEE89 /* ToneCurveVC.swift */,
+				5012A9D01AE8710300DFEE89 /* ImageProcessing.swift */,
+				5012A9B41AE86FF600DFEE89 /* Main.storyboard */,
+				5012A9B71AE86FF600DFEE89 /* Images.xcassets */,
+				5012A9B91AE86FF600DFEE89 /* LaunchScreen.xib */,
+				5012A9AE1AE86FF600DFEE89 /* Supporting Files */,
+			);
+			path = ToneCurve;
+			sourceTree = "<group>";
+		};
+		5012A9AE1AE86FF600DFEE89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9AF1AE86FF600DFEE89 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5012A9C31AE86FF600DFEE89 /* ToneCurveTests */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9C61AE86FF600DFEE89 /* ToneCurveTests.swift */,
+				5012A9C41AE86FF600DFEE89 /* Supporting Files */,
+			);
+			path = ToneCurveTests;
+			sourceTree = "<group>";
+		};
+		5012A9C41AE86FF600DFEE89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9C51AE86FF600DFEE89 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5012A9D61AE8721800DFEE89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5012A9D71AE8791C00DFEE89 /* AVFoundation.framework */,
+				5012A9D81AE8791C00DFEE89 /* CoreMedia.framework */,
+				5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */,
+				5012A9DA1AE8791C00DFEE89 /* OpenGLES.framework */,
+				5012A9DB1AE8791C00DFEE89 /* QuartzCore.framework */,
+				5012A9D41AE8720500DFEE89 /* GPUImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5012A9AA1AE86FF600DFEE89 /* ToneCurve */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5012A9CA1AE86FF600DFEE89 /* Build configuration list for PBXNativeTarget "ToneCurve" */;
+			buildPhases = (
+				5012A9A71AE86FF600DFEE89 /* Sources */,
+				5012A9A81AE86FF600DFEE89 /* Frameworks */,
+				5012A9A91AE86FF600DFEE89 /* Resources */,
+				5012A9E11AE8793100DFEE89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToneCurve;
+			productName = ToneCurve;
+			productReference = 5012A9AB1AE86FF600DFEE89 /* ToneCurve.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5012A9BF1AE86FF600DFEE89 /* ToneCurveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5012A9CD1AE86FF600DFEE89 /* Build configuration list for PBXNativeTarget "ToneCurveTests" */;
+			buildPhases = (
+				5012A9BC1AE86FF600DFEE89 /* Sources */,
+				5012A9BD1AE86FF600DFEE89 /* Frameworks */,
+				5012A9BE1AE86FF600DFEE89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5012A9C21AE86FF600DFEE89 /* PBXTargetDependency */,
+			);
+			name = ToneCurveTests;
+			productName = ToneCurveTests;
+			productReference = 5012A9C01AE86FF600DFEE89 /* ToneCurveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5012A9A31AE86FF600DFEE89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = taiki.ogasawara;
+				TargetAttributes = {
+					5012A9AA1AE86FF600DFEE89 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					5012A9BF1AE86FF600DFEE89 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 5012A9AA1AE86FF600DFEE89;
+					};
+				};
+			};
+			buildConfigurationList = 5012A9A61AE86FF600DFEE89 /* Build configuration list for PBXProject "ToneCurve" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5012A9A21AE86FF600DFEE89;
+			productRefGroup = 5012A9AC1AE86FF600DFEE89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5012A9AA1AE86FF600DFEE89 /* ToneCurve */,
+				5012A9BF1AE86FF600DFEE89 /* ToneCurveTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5012A9A91AE86FF600DFEE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012A9B61AE86FF600DFEE89 /* Main.storyboard in Resources */,
+				5012A9BB1AE86FF600DFEE89 /* LaunchScreen.xib in Resources */,
+				5012A9B81AE86FF600DFEE89 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012A9BE1AE86FF600DFEE89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5012A9E11AE8793100DFEE89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/GPUImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5012A9A71AE86FF600DFEE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012A9D31AE8710300DFEE89 /* ToneCurveVC.swift in Sources */,
+				5012A9B31AE86FF600DFEE89 /* ViewController.swift in Sources */,
+				5012A9B11AE86FF600DFEE89 /* AppDelegate.swift in Sources */,
+				5012A9D21AE8710300DFEE89 /* ImageProcessing.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012A9BC1AE86FF600DFEE89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012A9C71AE86FF600DFEE89 /* ToneCurveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5012A9C21AE86FF600DFEE89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5012A9AA1AE86FF600DFEE89 /* ToneCurve */;
+			targetProxy = 5012A9C11AE86FF600DFEE89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5012A9B41AE86FF600DFEE89 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5012A9B51AE86FF600DFEE89 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5012A9B91AE86FF600DFEE89 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5012A9BA1AE86FF600DFEE89 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5012A9C81AE86FF600DFEE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5012A9C91AE86FF600DFEE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5012A9CB1AE86FF600DFEE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ToneCurve/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5012A9CC1AE86FF600DFEE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = ToneCurve/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5012A9CE1AE86FF600DFEE89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ToneCurveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToneCurve.app/ToneCurve";
+			};
+			name = Debug;
+		};
+		5012A9CF1AE86FF600DFEE89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ToneCurveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToneCurve.app/ToneCurve";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5012A9A61AE86FF600DFEE89 /* Build configuration list for PBXProject "ToneCurve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012A9C81AE86FF600DFEE89 /* Debug */,
+				5012A9C91AE86FF600DFEE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5012A9CA1AE86FF600DFEE89 /* Build configuration list for PBXNativeTarget "ToneCurve" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012A9CB1AE86FF600DFEE89 /* Debug */,
+				5012A9CC1AE86FF600DFEE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5012A9CD1AE86FF600DFEE89 /* Build configuration list for PBXNativeTarget "ToneCurveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012A9CE1AE86FF600DFEE89 /* Debug */,
+				5012A9CF1AE86FF600DFEE89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5012A9A31AE86FF600DFEE89 /* Project object */;
+}

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dVk-kT-Rx4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Q0F-z6-krG">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="dVk-kT-Rx4" customClass="ViewController" customModule="ToneCurve" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dxX-Xi-dbi"/>
+                        <viewControllerLayoutGuide type="bottom" id="m0n-Ka-bsR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CjJ-jc-rg1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-pg-Rik">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="YVI-4n-dZ1">
+                                        <connections>
+                                            <action selector="pickImageAction:" destination="dVk-kT-Rx4" id="bQr-rd-gMI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cLc-SS-NUJ"/>
+                                    <barButtonItem title="ToneCurve" id="oEU-zX-kHc">
+                                        <connections>
+                                            <action selector="filtersSelectAction:" destination="dVk-kT-Rx4" id="bqo-B3-DUA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3Ip-t7-8cX"/>
+                                    <barButtonItem style="plain" id="5QI-E1-jJ0">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="V2b-WU-86f">
+                                            <rect key="frame" x="267" y="8" width="123" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="befor"/>
+                                                <segment title="after"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nol-nB-qej"/>
+                                    <barButtonItem systemItem="save" id="BXD-U5-nUI">
+                                        <connections>
+                                            <action selector="imageSave:" destination="dVk-kT-Rx4" id="BSY-Be-Apn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-uZ-IPX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E5f-uZ-IPX" firstAttribute="top" secondItem="dxX-Xi-dbi" secondAttribute="bottom" id="3ct-cj-Aac"/>
+                            <constraint firstItem="m0n-Ka-bsR" firstAttribute="top" secondItem="lPr-pg-Rik" secondAttribute="bottom" id="4br-Y4-9Xx"/>
+                            <constraint firstAttribute="trailing" secondItem="E5f-uZ-IPX" secondAttribute="trailing" id="6BI-cL-F7g"/>
+                            <constraint firstItem="E5f-uZ-IPX" firstAttribute="leading" secondItem="CjJ-jc-rg1" secondAttribute="leading" id="EnZ-yi-DZA"/>
+                            <constraint firstItem="lPr-pg-Rik" firstAttribute="top" secondItem="E5f-uZ-IPX" secondAttribute="bottom" id="Y1F-eq-dSY"/>
+                            <constraint firstItem="lPr-pg-Rik" firstAttribute="top" secondItem="E5f-uZ-IPX" secondAttribute="bottom" id="nlf-gR-Ngi"/>
+                            <constraint firstItem="lPr-pg-Rik" firstAttribute="leading" secondItem="CjJ-jc-rg1" secondAttribute="leading" id="w37-M6-xvp"/>
+                            <constraint firstAttribute="trailing" secondItem="lPr-pg-Rik" secondAttribute="trailing" id="yBT-WE-igX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beforAfterControl" destination="V2b-WU-86f" id="G0A-sM-rdD"/>
+                        <outlet property="showImageView" destination="E5f-uZ-IPX" id="GQl-IZ-EdJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6L9-fI-hCl" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Tone CurveVC-->
+        <scene sceneID="VII-ia-Upc">
+            <objects>
+                <viewController storyboardIdentifier="ToneCurveVC" id="15E-wL-nPP" customClass="ToneCurveVC" customModule="ToneCurve" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbh-EF-26H"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvK-Qh-gwW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CEB-de-3eL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CW-nw-kki">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="Llj-VF-f38">
+                                        <connections>
+                                            <action selector="cancelAction:" destination="15E-wL-nPP" id="X4i-6L-NOC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3ua-3M-kfr"/>
+                                    <barButtonItem style="plain" id="lzd-WO-pWf">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="bar" selectedSegmentIndex="0" id="5B9-eK-boe">
+                                            <rect key="frame" x="238" y="8" width="123" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="R"/>
+                                                <segment title="G"/>
+                                                <segment title="B"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ccl-mo-IUM"/>
+                                    <barButtonItem systemItem="trash" id="OkB-g1-TQt">
+                                        <connections>
+                                            <action selector="resetAction:" destination="15E-wL-nPP" id="ppR-cB-Me3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YVw-qr-q5a"/>
+                                    <barButtonItem systemItem="done" id="H5Z-re-smZ">
+                                        <connections>
+                                            <action selector="doneAction:" destination="15E-wL-nPP" id="gk5-Gk-GiW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cav-mb-XF5">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="トーンカーブ" id="IGu-6W-31b"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nEH-n6-Ppz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdT-6F-a0I" customClass="ToneCurveRightView" customModule="ToneCurve" customModuleProvider="target">
+                                <rect key="frame" x="20" y="536" width="300" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="XQ6-Wo-YLR"/>
+                                    <constraint firstAttribute="height" constant="20" id="ZEH-H8-fPB"/>
+                                    <constraint firstAttribute="width" constant="450" id="ngf-dZ-jKb"/>
+                                    <constraint firstAttribute="height" constant="20" id="qgx-Q9-5c1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZEH-H8-fPB"/>
+                                        <exclude reference="ngf-dZ-jKb"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-Eb-uCz" customClass="ToneCurveLeftView" customModule="ToneCurve" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="236" width="20" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="2oe-gc-P2S"/>
+                                    <constraint firstAttribute="height" constant="300" id="9rB-go-AzW"/>
+                                    <constraint firstAttribute="width" constant="20" id="fq7-oJ-Ugm"/>
+                                    <constraint firstAttribute="height" constant="450" id="jOG-DB-mXi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2oe-gc-P2S"/>
+                                        <exclude reference="jOG-DB-mXi"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iez-aQ-XYX" customClass="ToneCurveView" customModule="ToneCurve" customModuleProvider="target">
+                                <rect key="frame" x="20" y="236" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="162-ad-gEy"/>
+                                    <constraint firstAttribute="height" constant="450" id="jfl-MQ-oyM"/>
+                                    <constraint firstAttribute="height" constant="300" id="woU-mF-6nV"/>
+                                    <constraint firstAttribute="width" constant="450" id="x4J-2d-NVs"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jfl-MQ-oyM"/>
+                                        <exclude reference="x4J-2d-NVs"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nEH-n6-Ppz" secondAttribute="trailing" id="3Lj-rg-oJL"/>
+                            <constraint firstItem="qdT-6F-a0I" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" constant="20" id="6Vp-Qn-vEn"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="KkX-Eb-uCz" secondAttribute="bottom" constant="20" id="7GI-TW-qbL"/>
+                            <constraint firstItem="cav-mb-XF5" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="ABd-Qd-Xjb"/>
+                            <constraint firstAttribute="trailing" secondItem="2CW-nw-kki" secondAttribute="trailing" id="CQ6-xB-0st"/>
+                            <constraint firstItem="KkX-Eb-uCz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="F4M-Zw-FXY"/>
+                            <constraint firstItem="qdT-6F-a0I" firstAttribute="top" secondItem="iez-aQ-XYX" secondAttribute="bottom" id="F59-Ko-Sm3"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="KkX-Eb-uCz" secondAttribute="bottom" constant="20" id="JUx-RV-w9x"/>
+                            <constraint firstItem="vvK-Qh-gwW" firstAttribute="top" secondItem="2CW-nw-kki" secondAttribute="bottom" id="PHI-dS-rcy"/>
+                            <constraint firstAttribute="trailing" secondItem="cav-mb-XF5" secondAttribute="trailing" id="QPb-8f-pNv"/>
+                            <constraint firstItem="nEH-n6-Ppz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="WQt-sV-AC4"/>
+                            <constraint firstItem="nEH-n6-Ppz" firstAttribute="top" secondItem="cav-mb-XF5" secondAttribute="bottom" id="WWp-ki-exd"/>
+                            <constraint firstItem="KkX-Eb-uCz" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="bDl-3H-XqB"/>
+                            <constraint firstItem="qdT-6F-a0I" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" constant="20" id="dOE-ie-SLD"/>
+                            <constraint firstItem="qdT-6F-a0I" firstAttribute="top" secondItem="iez-aQ-XYX" secondAttribute="bottom" id="g0b-bo-b0L"/>
+                            <constraint firstItem="iez-aQ-XYX" firstAttribute="leading" secondItem="KkX-Eb-uCz" secondAttribute="trailing" id="ifd-wb-HXH"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="qdT-6F-a0I" secondAttribute="bottom" id="kKc-3N-J1e"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="leading" secondItem="CEB-de-3eL" secondAttribute="leading" id="khd-9r-7ec"/>
+                            <constraint firstItem="cav-mb-XF5" firstAttribute="top" secondItem="gbh-EF-26H" secondAttribute="bottom" id="mWb-Vl-Ds7"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="qdT-6F-a0I" secondAttribute="bottom" id="qJ3-IE-lej"/>
+                            <constraint firstItem="iez-aQ-XYX" firstAttribute="leading" secondItem="KkX-Eb-uCz" secondAttribute="trailing" id="wij-mX-lxB"/>
+                            <constraint firstItem="2CW-nw-kki" firstAttribute="top" secondItem="nEH-n6-Ppz" secondAttribute="bottom" id="xfe-ey-Xpv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bDl-3H-XqB"/>
+                                <exclude reference="ifd-wb-HXH"/>
+                                <exclude reference="6Vp-Qn-vEn"/>
+                                <exclude reference="F59-Ko-Sm3"/>
+                                <exclude reference="7GI-TW-qbL"/>
+                                <exclude reference="qJ3-IE-lej"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="preview" destination="nEH-n6-Ppz" id="r2q-7q-fi4"/>
+                        <outlet property="rgbSelectControl" destination="5B9-eK-boe" id="Bvk-y8-y1h"/>
+                        <outlet property="toneCurveView" destination="iez-aQ-XYX" id="8qR-TJ-cAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh2-dD-lxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="280"/>
+        </scene>
+    </scenes>
+</document>
