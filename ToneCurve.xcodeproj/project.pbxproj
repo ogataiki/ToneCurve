@@ -21,6 +21,7 @@
 		5012A9DE1AE8791C00DFEE89 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */; };
 		5012A9DF1AE8791C00DFEE89 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9DA1AE8791C00DFEE89 /* OpenGLES.framework */; };
 		5012A9E01AE8791C00DFEE89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5012A9DB1AE8791C00DFEE89 /* QuartzCore.framework */; };
+		50E94BFF1AE9BD9C008595DA /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E94BFE1AE9BD9C008595DA /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5012A9DA1AE8791C00DFEE89 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5012A9DB1AE8791C00DFEE89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		50E94BFE1AE9BD9C008595DA /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5012A9DE1AE8791C00DFEE89 /* CoreVideo.framework in Frameworks */,
 				5012A9DF1AE8791C00DFEE89 /* OpenGLES.framework in Frameworks */,
 				5012A9E01AE8791C00DFEE89 /* QuartzCore.framework in Frameworks */,
+				50E94BFF1AE9BD9C008595DA /* GoogleMobileAds.framework in Frameworks */,
 				5012A9D51AE8720500DFEE89 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +143,7 @@
 		5012A9D61AE8721800DFEE89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50E94BFE1AE9BD9C008595DA /* GoogleMobileAds.framework */,
 				5012A9D71AE8791C00DFEE89 /* AVFoundation.framework */,
 				5012A9D81AE8791C00DFEE89 /* CoreMedia.framework */,
 				5012A9D91AE8791C00DFEE89 /* CoreVideo.framework */,
@@ -399,6 +403,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ToneCurve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,6 +418,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ToneCurve/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

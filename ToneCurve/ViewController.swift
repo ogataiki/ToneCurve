@@ -1,5 +1,6 @@
 import UIKit
 import GPUImage
+import GoogleMobileAds
 
 protocol MainVCDelegate
 {
@@ -20,6 +21,8 @@ class ViewController: UIViewController
     var focusRadius0: Float!;
     var focusRadius1: Float!;
     
+    @IBOutlet weak var admobView: GADBannerView!
+    
     enum pickerModeType : Int
     {
         case sourceSelect = 0, overlaySelect
@@ -37,6 +40,17 @@ class ViewController: UIViewController
         // Do any additional setup after loading the view, typically from a nib.
         
         // AutoLayoutを使用するとviewDidLoadではframeが確定しない
+        
+        // 広告Unit IDを設定
+        admobView.adUnitID = "ca-app-pub-9023231672440164/4670601409"
+        admobView.rootViewController = self
+        
+        // テスト用デバイスのデバイスIDを登録してからリクエスト
+        let req = GADRequest()
+        req.testDevices = [
+            "f53f84138559f6ef12ec2126ee863bbd"
+        ]
+        admobView.loadRequest(req)
     }
     
     override func viewDidLayoutSubviews() {
