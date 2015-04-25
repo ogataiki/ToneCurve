@@ -173,9 +173,9 @@ class ImageProcessing
             NSValue(CGPoint: CGPointMake(0.5, 0.5)),
             NSValue(CGPoint: CGPointMake(0.75, 0.25)),
             NSValue(CGPoint: CGPointMake(0.0, 0.0)));
-        filter.redControlPoints = rArray;
-        filter.greenControlPoints = gArray;
-        filter.blueControlPoints = bArray;
+        filter.redControlPoints = rArray as [AnyObject];
+        filter.greenControlPoints = gArray as [AnyObject];
+        filter.blueControlPoints = bArray as [AnyObject];
         return filter.imageByFilteringImage(baseImage);
     }
     class func toneCurveFilter(baseImage: UIImage
@@ -188,9 +188,9 @@ class ImageProcessing
         // CGPoint : (0.0, 0.0) ~ (1.0, 1.0)
         // NSArray Default : [(0.0, 0.0), (0.5, 0.5), (1.0, 1.0)]
         var filter = GPUImageToneCurveFilter();
-        filter.redControlPoints = redPoints;
-        filter.greenControlPoints = greenPoints;
-        filter.blueControlPoints = bluePoints;
+        filter.redControlPoints = redPoints as [AnyObject];
+        filter.greenControlPoints = greenPoints as [AnyObject];
+        filter.blueControlPoints = bluePoints as [AnyObject];
         return filter.imageByFilteringImage(baseImage);
     }
     class func toneCurveFilter(baseImage: UIImage
@@ -200,7 +200,7 @@ class ImageProcessing
         // CGPoint : (0.0, 0.0) ~ (1.0, 1.0)
         // NSArray Default : [(0.0, 0.0), (0.5, 0.5), (1.0, 1.0)]
         var filter = GPUImageToneCurveFilter();
-        filter.rgbCompositeControlPoints = points;
+        filter.rgbCompositeControlPoints = points as [AnyObject];
         return filter.imageByFilteringImage(baseImage);
     }
     class func toneCurveFilter(baseImage: UIImage
@@ -211,10 +211,10 @@ class ImageProcessing
         ) -> UIImage
     {
         var filter = GPUImageToneCurveFilter();
-        filter.redControlPoints = redPoints;
-        filter.greenControlPoints = greenPoints;
-        filter.blueControlPoints = bluePoints;
-        filter.rgbCompositeControlPoints = rgbCompositePoints;
+        filter.redControlPoints = redPoints as [AnyObject];
+        filter.greenControlPoints = greenPoints as [AnyObject];
+        filter.blueControlPoints = bluePoints as [AnyObject];
+        filter.rgbCompositeControlPoints = rgbCompositePoints as [AnyObject];
         return filter.imageByFilteringImage(baseImage);
     }
 

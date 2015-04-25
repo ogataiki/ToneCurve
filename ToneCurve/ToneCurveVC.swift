@@ -27,7 +27,7 @@ class ToneCurveLeftView: UIView
         
         let componentsSize = (UInt(components.count) * UInt(sizeof(CGFloat)));
         let rgbaSize = (UInt(sizeof(CGFloat)) * 4);
-        let count = componentsSize / rgbaSize;
+        let count = Int(componentsSize / rgbaSize);
         
         var frame = self.bounds;
         var startPoint = frame.origin;
@@ -61,7 +61,7 @@ class ToneCurveRightView: UIView
         
         let componentsSize = (UInt(components.count) * UInt(sizeof(CGFloat)));
         let rgbaSize = (UInt(sizeof(CGFloat)) * 4);
-        let count = componentsSize / rgbaSize;
+        let count = Int(componentsSize / rgbaSize);
         
         var frame = self.bounds;
         var startPoint = frame.origin;
@@ -171,7 +171,7 @@ class ToneCurveView: UIView
         }
     }
 
-    func setPoints(arr: NSMutableArray) {
+    func setPoints(#arr: NSMutableArray) {
         points = arr;
     }
     func pointsInsert(point: CGPoint) -> Int {
@@ -225,7 +225,7 @@ class ToneCurveView: UIView
         // 点を描画
         var pointSize: CGFloat = 10.0;
         for point in points {
-            var p = (point as NSValue).CGPointValue();
+            var p = (point as! NSValue).CGPointValue();
             p.x = p.x * self.frame.width - (pointSize*0.5);
             p.y = self.frame.height - (p.y * self.frame.height) - (pointSize*0.5);
             self.addSubview(TouchPoint(frame: CGRectMake(p.x, p.y, pointSize, pointSize)));
@@ -247,11 +247,11 @@ class ToneCurveView: UIView
         line.lineWidth = 1;
 
         // 開始点
-        var sp = pointToPosition((points.objectAtIndex(0) as NSValue).CGPointValue());
+        var sp = pointToPosition((points.objectAtIndex(0) as! NSValue).CGPointValue());
         line.moveToPoint(CGPointMake(sp.x, sp.y));
         
         if (points.count == 2) {
-            var ep = pointToPosition((points.lastObject as NSValue).CGPointValue());
+            var ep = pointToPosition((points.lastObject as! NSValue).CGPointValue());
             line.addLineToPoint(CGPointMake(ep.x, ep.y));
         }
         else {
@@ -261,22 +261,22 @@ class ToneCurveView: UIView
                 var p0: CGPoint!;
                 if(i-3 < 0)
                 {
-                    p0 = pointToPosition((points.objectAtIndex(0) as NSValue).CGPointValue());
+                    p0 = pointToPosition((points.objectAtIndex(0) as! NSValue).CGPointValue());
                 }
                 else
                 {
-                    p0 = pointToPosition((points.objectAtIndex(i-3) as NSValue).CGPointValue());
+                    p0 = pointToPosition((points.objectAtIndex(i-3) as! NSValue).CGPointValue());
                 }
-                var p1 = pointToPosition((points.objectAtIndex(i-2) as NSValue).CGPointValue());
-                var p2 = pointToPosition((points.objectAtIndex(i-1) as NSValue).CGPointValue());
+                var p1 = pointToPosition((points.objectAtIndex(i-2) as! NSValue).CGPointValue());
+                var p2 = pointToPosition((points.objectAtIndex(i-1) as! NSValue).CGPointValue());
                 var p3: CGPoint!;
                 if(i >= points.count)
                 {
-                    p3 = pointToPosition((points.lastObject as NSValue).CGPointValue());
+                    p3 = pointToPosition((points.lastObject as! NSValue).CGPointValue());
                 }
                 else
                 {
-                    p3 = pointToPosition((points.objectAtIndex(i) as NSValue).CGPointValue());
+                    p3 = pointToPosition((points.objectAtIndex(i) as! NSValue).CGPointValue());
                 }
                 
                 let granularity: Int = 10;
@@ -427,16 +427,16 @@ class ToneCurveVC: UIViewController
         switch(rgbSelect)
         {
         case rgbselect.red:
-            toneCurveView.setPoints(points_r);
+            toneCurveView.setPoints(arr: points_r);
             break;
         case rgbselect.green:
-            toneCurveView.setPoints(points_g);
+            toneCurveView.setPoints(arr: points_g);
             break;
         case rgbselect.blue:
-            toneCurveView.setPoints(points_b);
+            toneCurveView.setPoints(arr: points_b);
             break;
         default:
-            toneCurveView.setPoints(points);
+            toneCurveView.setPoints(arr: points);
             break;
         }
         toneCurveView.draw();
@@ -480,13 +480,13 @@ class ToneCurveVC: UIViewController
     
     @IBAction func doneAction(sender: UIBarButtonItem) {
         
-        delegate = self.presentingViewController as ViewController;
+        delegate = self.presentingViewController as! ViewController;
         delegate.ToneCurveFinish(imageNow, isDone: true);
     }
     
     @IBAction func cancelAction(sender: UIBarButtonItem) {
         
-        delegate = self.presentingViewController as ViewController;
+        delegate = self.presentingViewController as! ViewController;
         delegate.ToneCurveFinish(imageNow, isDone: false);
     }
 }

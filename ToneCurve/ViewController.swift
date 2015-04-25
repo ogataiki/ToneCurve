@@ -58,6 +58,26 @@ class ViewController: UIViewController
         
         // AutoLayoutを使用するとframeが確定するのはここ
         beforAfterControl.addTarget(self, action: "beforAfterChange:", forControlEvents: UIControlEvents.ValueChanged);
+        
+        if let image = showImageView.image
+        {
+            // まあありえないよね
+        }
+        else
+        {
+            // 最初に画像を選択
+            pickerMode = pickerModeType.sourceSelect;
+            
+            let sourceType: UIImagePickerControllerSourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            
+            if(UIImagePickerController.isSourceTypeAvailable(sourceType))
+            {
+                let picker: UIImagePickerController = UIImagePickerController();
+                picker.sourceType = sourceType;
+                picker.delegate = self;
+                self.presentViewController(picker, animated: true, completion: nil);
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,11 +103,9 @@ class ViewController: UIViewController
     
     @IBAction func filtersSelectAction(sender: UIBarButtonItem) {
         
-        // フィルタ選択
         if let image = imageSource
         {
-            // トーンカーブの場合はビューを指定
-            let nextView = self.storyboard?.instantiateViewControllerWithIdentifier("ToneCurveVC") as ToneCurveVC;
+            let nextView = self.storyboard?.instantiateViewControllerWithIdentifier("ToneCurveVC") as! ToneCurveVC;
             nextView.passImageSource((self.beforAfter == selectImage.befor) ? self.imageSource : self.imageNow);
             self.presentViewController(nextView, animated: true, completion: nil);
         }
@@ -136,8 +154,8 @@ class ViewController: UIViewController
         
         let dic: NSDictionary = info;
         
-        imageSource = dic.objectForKey(UIImagePickerControllerOriginalImage) as UIImage;
-        imageNow = dic.objectForKey(UIImagePickerControllerOriginalImage) as UIImage;
+        imageSource = dic.objectForKey(UIImagePickerControllerOriginalImage) as! UIImage;
+        imageNow = dic.objectForKey(UIImagePickerControllerOriginalImage) as! UIImage;
         
         // そのまま表示
         self.showImageView.image = self.imageSource;
@@ -147,6 +165,14 @@ class ViewController: UIViewController
         
         // 閉じる
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+            // 画像選択後すぐにトーンカーブビューへ
+            if let image = self.imageSource
+            {
+                let nextView = self.storyboard?.instantiateViewControllerWithIdentifier("ToneCurveVC") as! ToneCurveVC;
+                nextView.passImageSource((self.beforAfter == selectImage.befor) ? self.imageSource : self.imageNow);
+                self.presentViewController(nextView, animated: true, completion: nil);
+            }
         });
     }
     
