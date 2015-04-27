@@ -133,6 +133,20 @@ class ViewController: UIViewController
             alert.addAction(cancelAction)
             self.presentViewController(alert, animated: true, completion: nil);
         }
+        else
+        {
+            let alert:UIAlertController = UIAlertController(title:"保存しました",
+                message:"",
+                preferredStyle: UIAlertControllerStyle.Alert);
+            
+            //Cancel 一つだけしか指定できない
+            let cancelAction:UIAlertAction = UIAlertAction(title: "OK",
+                style: UIAlertActionStyle.Cancel,
+                handler:{(action:UIAlertAction!) -> Void in
+            })
+            alert.addAction(cancelAction)
+            self.presentViewController(alert, animated: true, completion: nil);
+        }
     }
     
     func ToneCurveFinish(afterImage: UIImage, isDone: Bool) {
