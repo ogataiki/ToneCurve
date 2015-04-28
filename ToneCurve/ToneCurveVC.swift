@@ -1,5 +1,6 @@
 import UIKit
 import GPUImage
+import GoogleMobileAds
 
 protocol ToneCurveVCDelegate
 {
@@ -345,6 +346,7 @@ class ToneCurveVC: UIViewController
     var imageSource: UIImage!;
     var imageNow: UIImage!;
     
+    @IBOutlet weak var admobView: GADBannerView!
     @IBOutlet weak var toneCurveView: ToneCurveView!
 
     var points: NSMutableArray = [NSValue(CGPoint: CGPointMake(0.0, 0.0)), NSValue(CGPoint: CGPointMake(1.0, 1.0))];
@@ -378,6 +380,16 @@ class ToneCurveVC: UIViewController
         
         // AutoLayoutを使用するとviewDidLoadではframeが確定しない
         
+        // 広告Unit IDを設定
+        admobView.adUnitID = "ca-app-pub-9023231672440164/8323255006"
+        admobView.rootViewController = self
+        
+        // テスト用デバイスのデバイスIDを登録してからリクエスト
+        let req = GADRequest()
+        req.testDevices = [
+            "f53f84138559f6ef12ec2126ee863bbd"
+        ]
+        admobView.loadRequest(req)
     }
     
     override func viewDidLayoutSubviews() {
